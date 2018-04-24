@@ -1,11 +1,19 @@
 class ContatoBasico:
-	def __init__(self, nome, telefones):
-		self.nome = nome
-		self.telefones = telefones
+    def __init__(self, nome=' ', telefones= []):
+        self.nome = nome
 
-	'''
-		Definir getNome, setNome, setTelefone, getDados. Para isso pesquisar como pode ser feito os gtters e setters pythonicamente
+    @property
+    def nome(self):
+        return self.__nome
+        
+    @nome.setter
+    def nome(self, nome):
+        self.__nome = nome
 
-	'''
 
+    @telefones.setter
+    def telefones(self, telefone):
+        telefones.add(telefone)
 
+    def getDados(self):
+        return self.__nome + telefones
