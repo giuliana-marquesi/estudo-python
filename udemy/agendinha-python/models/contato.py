@@ -1,7 +1,9 @@
-class Contato:
-	def __init__(self,dtnasc,nome,idade):
+import contatoBasico
+
+class Contato(ContadoBasico):
+	def __init__(self,dtnasc,nome,idade, telefones):
+                ContatoBasico.__init__(self, nome, telefones)
 		self.dtnasc = dtnasc
-		self.nome = nome
 		self.idade = idade
 
 	'''
