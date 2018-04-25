@@ -1,6 +1,12 @@
+from telefone import Telefone
+
 class ContatoBasico:
-    def __init__(self, nome=' ', telefones= []):
+
+    __telefones = None
+
+    def __init__(self, nome=' '):
         self.nome = nome
+        self.__telefones = []
 
     @property
     def nome(self):
@@ -10,10 +16,18 @@ class ContatoBasico:
     def nome(self, nome):
         self.__nome = nome
 
+    @property
+    def telefones(self):
+        return self.__telefones
 
     @telefones.setter
     def telefones(self, telefone):
-        telefones.add(telefone)
+        self.__telefones.append(telefone)
 
     def getDados(self):
-        return self.__nome + telefones
+        dados = self.__nome + '\n'
+
+        for telefone in self.__telefones:
+            dados += telefone.getTelefone() + '\n'
+
+        return dados
