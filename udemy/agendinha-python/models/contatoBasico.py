@@ -1,10 +1,10 @@
-from telefone import Telefone
+from models.telefone import Telefone
 
 class ContatoBasico:
 
     def __init__(self, nome=' '):
         self.nome = nome
-        self._telefones = []
+        self.__telefones = []
 
     @property
     def nome(self):
@@ -15,12 +15,12 @@ class ContatoBasico:
         self.__nome = nome
 
     def addToTelefones(self, telefone):
-        self._telefones.append(telefone)
+        self.__telefones.append(telefone)
 
     def getDados(self):
         dados = self.__nome + '\n'
 
-        for telefone in self._telefones:
+        for telefone in self.__telefones:
             dados += telefone.getTelefone() + '\n'
 
         return dados
