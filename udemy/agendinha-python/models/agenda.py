@@ -1,4 +1,4 @@
-from lembrete import Lembrete
+from models.lembrete import Lembrete
 
 class Agenda:
         
