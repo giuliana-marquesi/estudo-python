@@ -1,7 +1,7 @@
 from lembrete import Lembrete
 
 class Agenda:
-
+        
 	__lembretes = []
 	
 	def __init__(self, name, owner, typeAgenda):
@@ -61,4 +61,9 @@ class Agenda:
 		self.__lembretes.remove(lembrete)
 	
 	def search_lmebrete(self, descr):
-		
+                matched_lembretes = []
+                for lembrete in self.__lembretes:
+                        if descr in lembrete.descr:
+                                matched_lembretes.append(lembrete)
+
+                return matched_lembretes
