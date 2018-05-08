@@ -20,10 +20,10 @@ class Lembrete:
     def descr(self, descr):
         self.__descr = descr
 
-    #não sei se isso cabe aqui
-    def readLembrete(self):
-        return 'Data: ' + self.__date.strftime("%d/%m/%y") + '\nDescrição: ' + self.__descr
+    def read_lembrete(self):
+        return 'Data: ' + self.__date.strftime("%d/%m/%y") + ' Descrição: ' + self.__descr
 
-    def updateLembrete(self, date, descr):
+    def update_lembrete(self, date, descr):
         self.__date = date
         self.__descr = descr
+        
