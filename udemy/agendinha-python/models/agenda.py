@@ -60,7 +60,7 @@ class Agenda:
 	def delete_lembrete(self, lembrete):
 		self.__lembretes.remove(lembrete)
 	
-	def search_lmebrete(self, descr):
+	def search_lembrete(self, descr):
                 matched_lembretes = []
                 for lembrete in self.__lembretes:
                         if descr in lembrete.descr:
